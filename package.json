@@ -1,0 +1,18 @@
+{
+  "name": "siakad-smk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistem Informasi Akademik Sekolah (SIAKAD)",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"blue.bold,cyan.bold\" \"pnpm --filter server dev\" \"pnpm --filter client dev\"",
+    "dev:server": "pnpm --filter server dev",
+    "dev:client": "pnpm --filter client dev",
+    "build": "pnpm --filter server build && pnpm --filter client build",
+    "db:migrate": "pnpm --filter server prisma:migrate",
+    "db:seed": "pnpm --filter server prisma:seed",
+    "db:studio": "pnpm --filter server prisma:studio"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
