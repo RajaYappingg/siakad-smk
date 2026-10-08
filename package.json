@@ -9,6 +9,7 @@
     "dev:client": "pnpm --filter client dev",
     "build": "pnpm --filter server build && pnpm --filter client build",
     "db:migrate": "pnpm --filter server prisma:migrate",
+    "db:push": "pnpm --filter server db:push",
     "db:seed": "pnpm --filter server prisma:seed",
     "db:studio": "pnpm --filter server prisma:studio"
   },
